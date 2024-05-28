@@ -415,7 +415,7 @@ def _make_sbatch_string(
     dependency: tp.Optional[str] = None,
     exclusive: tp.Optional[tp.Union[bool, str]] = None,
     array_parallelism: int = 256,
-    wckey: str = "submitit",
+    wckey: tp.Optional[str] = None,
     stderr_to_stdout: bool = False,
     map_count: tp.Optional[int] = None,  # used internally
     additional_parameters: tp.Optional[tp.Dict[str, tp.Any]] = None,
